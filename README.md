@@ -24,22 +24,7 @@ The **Book Finder App** is a web application built with React, Redux, and React 
 
 > Add screenshots of the landing page, search results page, and any other important UI elements here.
 
-📂 Project Structure
---------------------
 
-plaintext
-
-Copy code
-
-`.
-├── src
-│   ├── components         # Reusable components like Loader, BookItem, etc.
-│   ├── pages              # Main pages like LandingPage, BookResults, etc.
-│   ├── redux              # Redux setup, slices, and store configuration
-│   ├── App.js             # Main app entry with routing setup
-│   ├── index.js           # React DOM rendering
-│   └── App.css            # Main CSS file
-└── README.md`
 
 ⚙️ Installation
 ---------------
@@ -97,98 +82,17 @@ javascript
 
 Copy code
 
-`// src/pages/LandingPage.js
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-function LandingPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const navigate = useNavigate();
-
-  const handleSearch = () => {
-    if (searchTerm) {
-      navigate(`/books?search=${searchTerm}`);
-    }
-  };
-
-  return (
-    <div>
-      <h1>Find Your Book</h1>
-      <input
-        type="text"
-        placeholder="Enter book title..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
-    </div>
-  );
-}
-
-export default LandingPage;`
+`
 
 ### Results Page
 
 After searching, you'll be redirected to the results page, which fetches books based on the search term in the URL.
 
-#### Example results page code:
-
-javascript
-
-Copy code
-
-`// src/pages/BookResults.js
-import React from 'react';
-import { useSelector } from 'react-redux';
-
-function BookResults() {
-  const books = useSelector((state) => state.books.searchResults);
-
-  return (
-    <div>
-      <h2>Search Results</h2>
-      <div>
-        {books.map((book, index) => (
-          <div key={index}>
-            <h3>{book.title}</h3>
-            <p>{book.author_name?.join(', ')}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-export default BookResults;`
 
 ### Setting Up Redux
 
 Use Redux to store and manage search results across the app.
 
-#### Redux slice example:
-
-javascript
-
-Copy code
-
-`// src/redux/bookSlice.js
-import { createSlice } from '@reduxjs/toolkit';
-
-const bookSlice = createSlice({
-  name: 'books',
-  initialState: {
-    searchResults: [],
-  },
-  reducers: {
-    setSearchResults: (state, action) =>
- {
-      state.searchResults = action.payload;
-    },
-  },
-});
-
-export const { setSearchResults } = bookSlice.actions;
-export default bookSlice.reducer;`
 
 🧩 Future Improvements
 ----------------------
