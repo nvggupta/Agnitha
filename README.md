@@ -69,11 +69,6 @@ Make sure you have **Node.js** and **npm** installed.
 
 On the landing page, enter a book title in the search bar and click the search button to retrieve results.
 
-#### Example search code:
-
-javascript
-
-Copy code
 
 `
 
