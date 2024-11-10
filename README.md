@@ -19,13 +19,6 @@ The **Book Finder App** is a web application built with React, Redux, and React 
 -   **React Router DOM**: For navigation between different pages.
 -   **Slick Carousel**: A carousel for displaying featured book lists.
 
-📸 Screenshots
---------------
-
-> Add screenshots of the landing page, search results page, and any other important UI elements here.
-
-
-
 ⚙️ Installation
 ---------------
 
