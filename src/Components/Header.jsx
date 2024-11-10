@@ -1,19 +1,17 @@
-import BookLogo from "../../public/360_F_777575376_Z14u1CGxwn2WSw2NgiE2Nd1gutZQtkm6.jpg";
+// import BookLogo from "../../public/360_F_777575376_Z14u1CGxwn2WSw2NgiE2Nd1gutZQtkm6.jpg";
 
 import { FaHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { FaBook } from "react-icons/fa";
+
 function Header() {
   return (
     <>
 
-    <div className="fixed w-full top-0 flex justify-around items-center h-16 bg-black">
+    <div className="fixed w-full z-10 top-0 flex justify-between px-10 items-center h-16 bg-black z-100">
       <div>
       <Link to={'/'}>
-      <img
-          src={BookLogo}
-          alt="LOGO"
-          className="w-[100px] h-[60px] object-contain"
-        />
+       <FaBook  className="text-3xl cursor-pointer text-white" />  
       </Link>
         
       </div>
