@@ -33,6 +33,8 @@ function BooksCard({ elem, fav }) {
         src={`https://covers.openlibrary.org/b/id/${elem?.cover_i}-M.jpg`}
         alt="Book Cover"
         className="w-full h-64 object-cover rounded-md shadow-md hover:scale-105 transition-transform duration-200 mb-4"
+        loading="lazy"
+
       />
 
       <div className="text-center">
